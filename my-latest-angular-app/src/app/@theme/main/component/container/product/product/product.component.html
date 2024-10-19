@@ -1,0 +1,29 @@
+<div class="ekart--product--item" appHighlight appDisableProduct [isDisableProduct] = "!product?.is_in_inventory">
+  <div class="ekart-wishlist-sale-container">
+    <button class="ekart--add--to--wishlist" (click)="addToWishlist(product)">
+      <i class="fa fa-heart-o" aria-hidden="true"></i>
+    </button>
+    <div [hidden]="!product?.discountPrice" class="ekart-on-sale-tag">{{ product?.discountPrice }} % OFF</div>
+  </div>
+  <div class="ekart--product--image">
+    <img [src]="product?.imageURL" alt="{{ product?.name }}">
+  </div>
+  <div class="ekart--product--details">
+    <div class="ekart--product--name">{{ product?.name }}</div>
+    <div class="ekart--product--category">
+      {{ product?.gender }} . {{ product?.category }} . {{ product?.brand }}
+    </div>
+    <div class="ekart--product--available-colors">
+      {{ product?.color }} Colors . Best Seller
+    </div>
+    <div class="font-monospace fw-bold">
+      {{ product?.price | currency : 'Rs.'}}
+    </div>
+    <div [ngClass]="{ 'available-tag': product?.is_in_inventory, 'not-available-tag': !product?.is_in_inventory }">
+      {{ product?.is_in_inventory ? 'Available in Stock' : 'Not available is stock' }}
+    </div>
+    <button class="btn btn-primary ekart--add--to--cart" (click)="addToCart(product)">
+      Add to Cart
+    </button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="app-login-form">
+    <app-snackbar [errorMessage]="errorMessage"></app-snackbar>
+    <h2>{{ isLoginMode ? 'Login Here' : 'Sign Up Here' }}</h2>
+    <app-loader *ngIf="isLoading"></app-loader>
+    <form [formGroup]="loginForm" *ngIf="!isLoading">
+        <div class="form-input">
+            <label>Email Address</label>
+            <input type="email" placeholder="Email address"
+                   formControlName="email" required
+            >
+        </div>
+        <div class="form-input">
+            <label>Password</label>
+            <input type="password" placeholder="Password"
+                   formControlName="password"
+                   minlength="8"
+            >
+        </div>
+        <button type="submit" class="app-login-btn" (click)="onSubmit()">
+            {{ isLoginMode ? 'Login' : 'Sign Up' }}
+        </button>
+        <p>{{ isLoginMode ? 'Do not have an account yet ?' : 'Already Have an account' }}
+            <button class="app-toggle-btn" (click)="onSwitchMode()">
+                {{ isLoginMode ? 'Register Here.' : 'Sign Up Here' }}
+            </button>
+        </p>
+    </form>
+</div>

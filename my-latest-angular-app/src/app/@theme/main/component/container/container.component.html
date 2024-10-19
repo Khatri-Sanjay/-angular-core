@@ -1,0 +1,26 @@
+<app-search (onSearchData)="onSearchData($event)"></app-search>
+<app-product-list [searchData]="searchData" #productListComponent></app-product-list>
+@if (productListComponent?.selectedProductData) {
+  <app-product-view [selectedProductData]="productListComponent"></app-product-view>
+}
+
+<div class="ekart-feature-product">
+  <div class="ekart-feature-product-heading">
+    Latest Arrivals in Popular Brands
+  </div>
+
+  <app-featured-brand>
+    <h3 class="title">New Arrivals in Nike</h3>
+    <button class="call-to-action">Learn More</button>
+  </app-featured-brand>
+  <app-featured-brand>
+    <h3 class="title">New Arrivals in Nike</h3>
+    <button class="call-to-action">Learn More</button>
+  </app-featured-brand>
+  <app-featured-brand>
+    <h3 class="title">New Arrivals in Nike</h3>
+    <button class="call-to-action">Learn More</button>
+  </app-featured-brand>
+</div>
+
+

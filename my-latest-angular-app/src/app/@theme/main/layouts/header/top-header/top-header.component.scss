@@ -1,0 +1,23 @@
+/* Reduce the vertical height of the top header */
+.container {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.col-12 {
+  padding: 0;
+}
+
+.btn-link {
+  color: #007bff;
+  font-size: 0.75rem; /* Smaller font size */
+  margin: 0 8px; /* Reduced margin */
+}
+
+.btn-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+<div class="filter-container">
+  <span class="filter-label">Filter:</span>
+
+  <label class="filter-option">
+    <input type="radio" name="filter" value="all" [(ngModel)]="selectFilterRadioButton"
+           (change)="onFilterButtonChanged()"
+    />
+    <span>All {{ '(' + all + ')'}}</span>
+  </label>
+
+  <label class="filter-option">
+    <input type="radio" name="filter" value="true" [(ngModel)]="selectFilterRadioButton"
+           (change)="onFilterButtonChanged()"
+    />
+    <span>In Stock {{ '(' + inStock + ')'}}</span>
+  </label>
+
+  <label class="filter-option">
+    <input type="radio" name="filter" value="false" [(ngModel)]="selectFilterRadioButton"
+           (change)="onFilterButtonChanged()"
+    />
+    <span>Out of Stock {{ '(' + outOfStock + ')'}}</span>
+  </label>
+</div>

@@ -1,0 +1,47 @@
+/* Navbar Styles */
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem; /* Increase font size for the text logo */
+}
+
+.navbar-nav {
+  margin: auto;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-link {
+  color: #343a40;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Search Bar Styles */
+.form-control {
+  border-radius: 0;
+}
+
+.input-group-append .btn {
+  border-radius: 0;
+  border-left: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .form-inline {
+    margin-top: 10px;
+  }
+}

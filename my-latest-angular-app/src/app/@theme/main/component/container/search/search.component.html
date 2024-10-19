@@ -1,0 +1,9 @@
+<div class="ekart--search--product">
+  <input class="ekart-search-product-input" [attr.placeholder]="placeholder"
+         (input) = "onInputData($event)"
+  >
+  <button class="btn btn-search">Search</button>
+</div>
+<div class="ekart-search-result-for" [hidden] = "!inputData">
+  <p ><strong>Search result for:</strong> {{ inputData }}</p>
+</div>
